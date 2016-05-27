@@ -1,0 +1,20 @@
+<!-- Footer -->
+<div class="template-footer">
+
+    <!-- Footer Container -->
+    <div class="flex-container">
+
+        <!-- Page Content -->
+        <div class="flex-item flex-profile1">
+            {{widget('companyname', 'footercompanyname', {"business": "profile"})|raw}}
+            {{widget('profile', 'address', { 'profileType':'address', 'address':'profile'})|raw}}
+        </div>
+        <div class="flex-item flex-profile2">
+            {{widget('profile', 'email', { 'profileType':'email', 'email':'profile'})|raw}}
+            {{widget('profile', 'phone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+            {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+        </div>
+
+    </div>
+    <!-- End Container -->
+</div>

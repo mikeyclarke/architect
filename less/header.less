@@ -1,0 +1,155 @@
+
+
+.brand {
+    min-height: 45px;
+}
+
+
+// -----------------------------
+// Homepage
+// -----------------------------
+
+.homepage-container {
+    .flexbox(flex);
+    .flex-direction(column);
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+    .align-items(center);
+    .align-content(space-between);
+
+    background-color: @color__navigation--background;
+
+}
+
+.template-homepage {
+    .brand,
+    .widget[data-widget-type="responsiveslideshow"],
+    .widget[data-widget-type="extendednavigation"] {
+        width: 100%;
+    }
+}
+
+.brand,
+.widget[data-widget-type="responsiveslideshow"],
+.widget[data-widget-type="extendednavigation"] {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+
+@media @tablet {
+    .brand {
+        .flex-order(0);
+    }
+    .widget[data-widget-type="extendednavigation"] {
+        .flex-order(1);
+    }
+    .widget[data-widget-type="responsiveslideshow"] {
+        .flex-order(2);
+    }
+}
+
+.template-homepage {
+    .brand {
+        margin: 20px auto 10px;
+        max-width: 1200px;
+        text-align: center;
+        @media @tablet {
+            .flex-display;
+            .flex-wrap(wrap);
+            .align-items(center);
+            .align-content(stretch);
+            padding-left: 5%;
+
+            .logo {
+                margin-right: 5px;
+            }
+        }
+    }
+    a.company-link:hover {
+        text-decoration: none;
+    }
+}
+
+
+
+// --------------------------------
+// Sticky nav
+// --------------------------------
+
+.template-default .template-header {
+    background-color: @color__navigation--background;
+}
+
+.template-default .template-header,
+.sticky {
+
+    @media only screen and (min-width: 1024px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+    }
+}
+
+@media @tablet {
+    .template-header {
+        background-color: @color__navigation--background;
+    }
+}
+
+
+
+
+// --------------------------------
+// Default
+// --------------------------------
+
+// Flexbox in Header
+
+.template-default {
+    .brand,
+    .widget[data-widget-type="responsiveslideshow"] {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+}
+
+.template-default {
+    .template-header {
+        .flex-display;
+        .flex-wrap(wrap);
+        .justify-content(space-between);
+        .align-items(center);
+        .align-content(space-between);
+        @media @tablet {
+            display: block;
+        }
+    }
+    .brand {
+        .flex-display;
+        .flex-wrap(wrap);
+        .align-items(center);
+        .align-content(stretch);
+        padding-left: 5%;
+        @media only screen and (min-width: 1140px) {
+            padding-left: 50px;
+        }
+        @media @tablet {
+            padding-right: 50px;
+        }
+    }
+    .logo {
+        margin-right: 5px;
+        .logo-image {
+            max-height: 45px;
+        }
+    }
+}
+
+
+
+
+

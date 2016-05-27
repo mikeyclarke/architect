@@ -1,0 +1,92 @@
+<!doctype html>
+<!--[if lt IE 7]>
+    <html class="no-js ie6 oldie" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+    <html class="no-js ie7 oldie" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+    <html class="no-js ie8 oldie" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ page.seoLang }}">
+<!--<![endif]-->
+    <head>
+        {% include "includes/head.twig" %}
+        {% include basekit.headScript %}
+    </head>
+
+    <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
+
+            <!-- Page Content -->
+
+                <!-- Main Widget Zone -->
+                {% block content %}
+                {% endblock %}
+
+            <!-- Footer Include -->
+            {% include "includes/footer.twig" %}
+
+            <!-- End Page Content -->
+
+
+        {% include basekit.bodyScript %}
+
+        <!-- Istok Web Font from Google Fonts -->
+
+        <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+
+            <!-- Sticky Header -->
+
+        <script src="{{asset('js/position-sticky.js')}}"></script>
+        <script>
+        PositionSticky([document.getElementById('nav-bar')]);
+
+        $(".homepage-container").css("height", $(window).height());
+        $(window).bind("resize",function() {
+            $(".homepage-container").css("height", $(window).height());
+        });
+        </script>
+
+        <script>
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+        </script>
+
+
+            <!-- Nav Menu Script -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+           <script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')
+        </script>
+
+        <script>
+            // Toggles class open to display/hide the whole navigation
+            $( ".navigation-toggle" ).click(function() {
+                $( ".bk-extendednavigation" ).toggleClass( "open" );
+            });
+            // Togglse class open to display/hide folders
+            $( ".navigation-item.folder" ).each(function() {
+                $( this ).click(function() {
+                    $( this ).toggleClass( "open" );
+                });
+            });
+        </script>
+
+
+    </body>
+
+</html>

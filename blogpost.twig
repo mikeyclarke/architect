@@ -1,0 +1,15 @@
+{% extends "layout.twig" %}
+{% block class %}template-blogpost{% endblock %}
+{% block content %}
+
+                <!-- Header Include -->
+                {% include "includes/header.twig" %}
+
+                <section class="container">
+
+        <!-- Main Widet Zone -->
+
+        {{zone('main')|raw}}
+    </section>
+
+{% endblock %}

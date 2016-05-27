@@ -1,0 +1,620 @@
+
+
+// -----------------------------
+// SLIDESHOW
+// -----------------------------
+
+// Slideshow Layout
+// ----------------
+
+.responsiveslideshow {
+    position: relative;
+    width: 100%;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    @media @tablet {
+        display: inline-block;
+    }
+
+    .slides-list {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        -webkit-flex: 0 1 85%;
+        -ms-flex: 0 1 85%;
+        flex: 0 1 85%;
+        max-width: 1200px;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+
+    .slide-navigation,
+    .slide-pagination {
+        -webkit-flex: 0 1 5%;
+        -ms-flex: 0 1 5%;
+        flex: 0 1 5%;
+    }
+    .slide-navigation {
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .slide-pagination {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+
+.container .responsiveslideshow {
+    .slides-list {
+        -webkit-flex: 0 1 98%;
+        -ms-flex: 0 1 98%;
+        flex: 0 1 98%;
+    }
+}
+
+// Slideshow Height
+.slides-list,
+.responsiveslideshow .figure {
+    position: relative;
+    overflow: hidden;
+    min-height: 800px;
+    @media only screen and (max-width: 1600px) {
+        min-height: 650px;
+    }
+    @media only screen and (max-width: 1400px) {
+        min-height: 600px;
+    }
+    @media only screen and (max-width: 1100px) {
+        min-height: 550px;
+    }
+    @media @tablet {
+        min-height: 450px;
+    }
+    @media only screen and (max-width: 600px) {
+        min-height: 350px;
+    }
+    @media @mobile {
+        min-height: 200px;
+    }
+}
+
+// Slideshow Image Captions
+// ------------------------
+
+.responsiveslideshow {
+    .figure {
+        display: table;
+        width: 100%;
+        background-color: transparent;
+    }
+    .caption {
+        position: relative;
+        width: 100%;
+        padding: 25px 20px;
+        vertical-align: middle;
+        display: table-cell;
+        text-align: center;
+        background-color: rgba(0,0,0,0.1);
+        .image-title {
+            font-family: @font__feature-headline--font-family;
+            color: @color__feature-headline--text;
+            font-size: @font__feature-headline--font-size;
+            font-weight: @font__feature-headline--font-weight;
+            line-height: @font__feature-headline--line-height;
+            padding-bottom: 5px;
+            @media @tablet {
+                font-size: bkscale(@font__feature-headline--font-size, .8);
+                line-height: bkscale(@font__feature-headline--line-height, .8);
+            }
+            @media @mobile {
+                font-size: bkscale(@font__feature-headline--font-size, .6);
+                line-height: bkscale(@font__feature-headline--line-height, .6);
+            }
+        }
+        .image-description {
+            font-family: @font__feature-strapline--font-family;
+            color: @color__feature-strapline--text;
+            font-size: @font__feature-strapline--font-size;
+            font-weight: @font__feature-strapline--font-weight;
+            line-height: @font__feature-strapline--line-height;
+            @media @tablet {
+                font-size: bkscale(@font__feature-strapline--font-size, .9);
+                line-height: bkscale(@font__feature-strapline--line-height, .9);
+            }
+            @media @mobile {
+                font-size: bkscale(@font__feature-strapline--font-size, .8);
+                line-height: bkscale(@font__feature-strapline--line-height, .8);
+            }
+        }
+        .image-title,
+        .image-description {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 5px 20px;
+        }
+    }
+}
+
+.responsiveslideshow {
+    .button {
+        background-color: transparent;
+        color: @color-swatch6;
+        width: 100%;
+        padding: 10px 0;
+        &:hover {
+            background-color: transparent;
+            color: @color-swatch3;
+        }
+    }
+}
+
+// Slideshow Navigation
+
+.slide-navigation {
+    .control-text {
+        display: none;
+    }
+    @media @tablet {
+        width: auto;
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .icon--previous:before {
+        content: "\f176";
+    }
+    .icon:before {
+        margin-right: 0;
+    }
+    .icon--next:after {
+        content: "\f176";
+    }
+    .icon--next {
+        margin-right: 0;
+        -ms-transform: rotate(180deg); /* IE 9 */
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(180deg);
+    }
+    .icon--pause.pause:before {
+        content: "\f04c";
+        font-size: 11px;
+    }
+    .icon--pause:before {
+        content: "\f04b";
+        font-size: 11px;
+    }
+}
+
+// Slideshow Pagination
+
+.slide-pagination {
+    @media @tablet {
+        display: none;
+    }
+}
+
+.pagination-item {
+    width: 100%;
+    text-align: center;
+    .button {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+        box-shadow: none;
+        -webkit-border-radius: 50px;
+           -moz-border-radius: 50px;
+                border-radius: 50px;
+        background-color: transparent;
+        border: 2px solid @color-swatch6;
+    }
+}
+
+.responsiveslideshow .selected .button {
+    background-color: @color-swatch6;
+}
+
+
+
+
+// -----------------------------
+// NAVIGATION
+// -----------------------------
+
+// Widget Overlay
+.widget__extendednavigation {
+    + .widget-overlay {
+        @media @tablet {
+            display: none;
+        }
+    }
+
+    &.open + .widget-overlay {
+        @media @tablet {
+            z-index: 10400!important;
+            display: block;
+            margin: 44px auto 0;
+
+            &:hover {
+                background: rgba(0, 147, 135, 0.2);
+                border: 1px solid rgb(0, 148, 136);
+                box-shadow: rgba(0, 147, 135, 0.2) 0px 0px 0px 3px inset;
+            }
+        }
+    }
+}
+
+// Remove margin from ul nav list and widget
+
+.widget[data-widget-type="extendednavigation"] {
+    margin-bottom: 0;
+}
+
+.navigation-list {
+    margin: 0;
+    background-color: @color__navigation--background;
+    @media only screen and (min-width: 769px) {
+        padding: 10px 0;
+    }
+}
+
+// .template-default .navigation-list {
+//     padding: 10px 34px 10px 50px;
+//     @media @tablet {
+//         padding: 50px 5% 50px 0;
+//     }
+// }
+
+// Navigation alignment
+
+.extendednavigation {
+    &.align-left { text-align: left; }
+    &.align-right { text-align: right; }
+    &.align-center { text-align: center; }
+}
+
+// Nav font
+
+.extendednavigation {
+    &__item-name.item-name {
+        color: @color__navigation--text;
+        font-size: @font__navigation--font-size;
+        font-weight: @font__navigation--font-weight;
+        line-height: @font__navigation--line-height;
+        letter-spacing: @font__navigation--letter-spacing;
+        &:hover {
+            color: @color__navigation--text--hover;
+        }
+    }
+}
+
+// Dropdown Menu - Folder Item Parent: Gives arrow
+
+.item-name--parent:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color__navigation--text;
+}
+
+.item-name--parent:hover:after {
+    border-top-color: @color__navigation--text--hover;
+}
+
+// Nav item
+
+.navigation-item:first-child {
+    @media @tablet {
+        border-top: 1px solid darken(@color__body--background, 5%);
+    }
+}
+
+.navigation-item.navigation-item--child:first-child {
+    @media @tablet {
+        border-top: none;
+    }
+}
+
+// Selected nav item
+
+.navigation-item.selected > .item-name {
+    color: @color__navigation--text--selected;
+}
+
+// Folder
+
+.navigation-list--children {
+    left: inherit;
+    right: 0;
+    width: auto;
+    min-width: 200px;
+    white-space: normal;
+    border: 1px solid darken(@color__body--background, 7%);
+    background-color: @color__navigation--background;
+    // Padding for folder list and folder items on desktop
+    @media only screen and (min-width: 769px) {
+        padding: 7px 0;
+        .item-name {
+            padding: 7px 14px;
+        }
+    }
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+
+// Collapsible navigation
+// ----------------------
+// MISSING CLASS IN THE TOGGLE WHEN YOU CLICK ON IT.
+// A SCRIPT FOR THE TOGGLE TO WORK HAS BEEN ADDED TO LAYOUT.TWIG
+
+.navigation-toggle {
+    display: none;
+}
+
+@media @tablet {
+    .navigation-toggle {
+        position: absolute;
+        top: -45px;
+        right: 5%;
+        width: 45px;
+        height: 45px;
+        display: block;
+        overflow: hidden;
+        text-indent: -9999px;
+        line-height: 0;
+        background-color: @color__navigation--background;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        outline: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: darken(@color__navigation--background, 50%);
+            box-shadow: 0 6px 0 darken(@color__navigation--background, 50%);
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 12px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: darken(@color__navigation--background, 50%);
+            .transition( all, 0.5s, ease );
+        }
+    }
+    .navigation-toggle:hover {
+        background-color: @color__navigation--background;
+        &:before {
+            background: darken(@color__navigation--background, 30%);
+            box-shadow: 0 6px 0 darken(@color__navigation--background, 30%);
+        }
+        &:after {
+            background: darken(@color__navigation--background, 30%);
+        }
+    }
+    // Toggle Button Open State
+    .open & {
+        &.navigation-toggle {
+            background-color: @color__navigation--background;
+            &:before {
+                margin-top: 21px;
+                background: darken(@color__navigation--background, 50%);
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .transition( all, 0.5s, ease );
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
+                background: darken(@color__navigation--background, 50%);
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                .transition( all, 0.5s, ease );
+            }
+        }
+        &.navigation-toggle:hover {
+            &:before,
+            &:after {
+                background: darken(@color__navigation--background, 30%);
+            }
+        }
+    }
+    .navigation-body {
+        display: none;
+        .open & {
+            display: block;
+        }
+    }
+    .navigation-item {
+        width: 100%;
+        border-bottom: 1px solid darken(@color__body--background, 5%);
+    }
+}
+
+
+
+
+// -----------------------------
+// Social Icons
+// -----------------------------
+
+.social-item {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color: @color__socialicons--icon--background;
+    width: 28px;
+    height: 28px;
+    margin-right: 3px;
+    text-align: center;
+    &:hover {
+        background-color: darken(@color__socialicons--icon--background, 10%);
+    }
+    .social-link {
+        display: inline-block;
+        padding: 5px 8px 6px;
+        color: @color__socialicons--icon;
+        &:before {
+            margin-right: 0;
+            font-size: 14px;
+            color: @color__socialicons--icon;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .social-name {
+        display: none;
+    }
+}
+
+
+
+
+// -----------------------------
+// Profile Widget
+// -----------------------------
+
+// Alignment in profile widgets
+
+.flex-profile1 {
+    text-align: left;
+    margin: 15px 10px 15px 0;
+    @media only screen and (max-width : 1024px) {
+        margin: 10px 10px 10px 0;
+    }
+}
+
+.flex-profile2 {
+    text-align: right;
+    margin: 15px 0 15px 10px;
+    @media only screen and (max-width : 1024px) {
+        margin: 10px 0 10px 10px;
+    }
+}
+
+.profile {
+    h1, h2, h3, h4, p, a, .social-link:before {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+        padding-bottom: 0;
+    }
+    .legend {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+    input {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+    }
+    .address p {
+        padding-bottom: 0;
+    }
+}
+
+// Profile Widget: Signup Form Fail Message
+.template-footer {
+    .overlay.fail .message-box .message-text {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+    }
+}
+
+// Profile Widget: Twitter
+.profile .twitter .tweet-item {
+    .avatar {
+        display: none;
+    }
+    .tweet-wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 20px;
+        padding-left: 0;
+        border: none;
+    }
+    .tweet-content a,
+    .account-link {
+        color: @color-swatch3;
+    }
+    .tweet-metadata {
+        .timestamp,
+        .via {
+            color: @color-swatch6;
+        }
+    }
+}
+
+// Profile Widget: Map Widget
+.map {
+    border: 1px solid darken(@color__body--background, 8%);
+}

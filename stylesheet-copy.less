@@ -1,0 +1,246 @@
+// -------------------------------------
+// BaseKit Standard Template: Stylesheet
+// -------------------------------------
+
+// body.min-tdk #tdk-toolbar,
+// #tdk-toolbar {
+//     display: none !important;
+// }
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+
+// 1. #LESS INCLUDES
+// 2. #PAGE SETTINGS
+// 3. #Mixins
+
+
+
+
+// -----------------------------
+// 1. #LESS Includes
+// -----------------------------
+
+
+@import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+
+@import "@{templateLocal}/bk-v8-test.less";
+
+// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
+//    your template to guarentee widgets come to life. Proivides default styles for all widgets.
+
+// Template Includes
+@import "@{templateLocal}/less/forms.less"; // Global styles
+@import "@{templateLocal}/less/widgets.less"; // Widgets
+
+// Plugin Includes
+@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
+@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
+
+@import "@{templateLocal}/less/fork-variables.less"; // Forked Templates
+
+
+
+
+// -----------------------------
+// Anchor links
+// -----------------------------
+
+a {
+    color: @color__link--text;
+}
+
+
+
+
+// -----------------------------
+// Global Styles
+// -----------------------------
+
+
+body {
+    background-color: @color__body--background;
+}
+
+.company-link {
+    color: @color__companyname--text;
+    font-family: @font__companyname--font-family;
+    font-size: @font__companyname--font-size;
+    font-weight: @font__companyname--font-weight;
+    line-height: @font__companyname--line-height;
+    letter-spacing: @font__companyname--letter-spacing;
+    @media only screen and (max-width : 600px) {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
+    }
+}
+
+h1 {
+    color: @color__h1--text;
+    font-family: @font__h1--font-family;
+    font-size: @font__h1--font-size;
+    font-weight: @font__h1--font-weight;
+    line-height: @font__h1--line-height;
+    letter-spacing: @font__h1--letter-spacing;
+}
+
+h2 {
+    color: @color__h2--text;
+    font-family: @font__h2--font-family;
+    font-size: @font__h2--font-size;
+    font-weight: @font__h2--font-weight;
+    line-height: @font__h2--line-height;
+    letter-spacing: @font__h2--letter-spacing;
+}
+
+h3 {
+    color: @color__h3--text;
+    font-family: @font__h3--font-family;
+    font-size: @font__h3--font-size;
+    font-weight: @font__h3--font-weight;
+    line-height: @font__h3--line-height;
+    letter-spacing: @font__h3--letter-spacing;
+}
+
+h4 {
+    color: @color__h4--text;
+    font-family: @font__h4--font-family;
+    font-size: @font__h4--font-size;
+    font-weight: @font__h4--font-weight;
+    line-height: @font__h4--line-height;
+    letter-spacing: @font__h4--letter-spacing;
+}
+
+p {
+    color: @color__p--text;
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    font-weight: @font__p--font-weight;
+    line-height: @font__p--line-height;
+    letter-spacing: @font__p--letter-spacing;
+}
+
+
+// -----------------------------
+// Header
+// -----------------------------
+
+// Flexbox in Header
+.template-header {
+    .flex-display;
+    .flex-wrap(wrap);
+    .justify-content(space-between);
+    .align-items(center);
+    .align-content(space-between);
+}
+
+// Home Page
+.template-homepage {
+    .homepage-container {
+        background-color: @color__navigation--background;
+    }
+    @media only screen and (min-width: 1024px) {
+        .homepage-container {
+            height: 100vh;
+        }
+    }
+    @media only screen and (min-width: 769px) {
+        .widget[data-widget-type="extendednavigation"] {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 99999;
+            width: 100%;
+        }
+        .navigation-list {
+            background-color: @color__navigation--background;
+        }
+        .navigation-list--children {
+            background-color: @color__navigation--background;
+        }
+    }
+}
+
+// Default Page
+
+.template-default .template-header {
+    background-color: @color__navigation--background;
+}
+
+.template-default .template-header,
+.sticky {
+
+    @media only screen and (min-width: 1024px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+    }
+}
+
+@media @tablet {
+    .template-header {
+        background-color: @color__navigation--background;
+    }
+}
+
+
+// -----------------------------
+// Page Container
+// -----------------------------
+
+
+.container {
+    width: 90%;
+    margin: 50px 5% 0;
+    @media only screen and (min-width: 1140px) {
+        width: @value__container--width;
+        margin: 50px auto 0;
+    }
+    @media @tablet {
+        margin-top: 20px;
+    }
+}
+
+.template-default .container {
+    @media only screen and (min-width: 1024px) {
+        margin: 120px auto 0;
+    }
+}
+
+.homepage-container {
+    position: relative;
+}
+
+.template-blogpost .container {
+    width: 100%;
+    margin: 0 auto;
+    @media only screen and (min-width: 1140px) {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+// -----------------------------
+// 3. #Mixins
+// -----------------------------
+
+
+.border-radius (@radius: 3px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    transition:         @prop @time @ease;
+}

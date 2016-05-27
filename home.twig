@@ -1,0 +1,54 @@
+{% extends "layout.twig" %}
+{% block class %}template-homepage{% endblock %}
+{% block content %}
+
+    <div class="homepage-container">
+        <!-- Header -->
+        <div class="brand">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {
+                "business": "profile",
+                "showTplWidget":"0"
+            })|raw}}
+        </div>
+
+        <!-- Responsive Slideshow Widget -->
+        {{widget('responsiveslideshow', 'slideshow', {
+            'duration':'3',
+            'transSpeed': '1000',
+            'transType': 'fade',
+            'showButtons': true,
+            'showBullets': true,
+            'allowPause': true,
+            'allowLoop': false,
+            'crop': 1,
+            'images':[
+              {
+                'imageHeight':'800',
+                'imageWidth':'1200',
+                'url':asset('/images/slideshow-corner.jpg')
+              },
+              {
+                'imageHeight':'800',
+                'imageWidth':'1200',
+                'url':asset('/images/slideshow-building.jpg')
+              },
+              {
+                'imageHeight':'800',
+                'imageWidth':'1200',
+                'url':asset('/images/slideshow-balconies.jpg')
+              }
+            ]
+        })|raw}}
+
+        {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+
+    </div>
+
+
+    <section class="container">
+        <!-- Main Widget Zone -->
+        {{zone('main')|raw}}
+    </section>
+
+{% endblock %}
