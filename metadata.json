@@ -86,7 +86,7 @@
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch7",
             "letter-spacing": "0px",
             "background-color": "@color-swatch3",
             "background-color-hover": "lighten(@color-swatch3,5%)"
@@ -96,7 +96,7 @@
             "font-size": "36px",
             "font-weight": "400",
             "line-height": "46px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch7",
             "letter-spacing": "0px"
         },
         "font9": {

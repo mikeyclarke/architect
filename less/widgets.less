@@ -750,10 +750,11 @@
 .imagewidget {
     .image-link {
         display: block;
+        text-align: center;
     }
     .caption {
         position: relative;
-        width: 95%;
+        width: 80%;
         top: -30px;
         padding: 10px 20px;
         margin: 0 0 0 auto;
@@ -762,6 +763,17 @@
             width: 100%;
             top: 0;
         }
+    }
+    .image-title {
+        font-family: @font__h4--font-family;
+        font-size: @font__h4--font-size;
+        line-height: @font__h4--line-height;
+        color: @color__h4--text;
+    }
+    .image-description {
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
+        color: @color__p--text;
     }
 }
 
