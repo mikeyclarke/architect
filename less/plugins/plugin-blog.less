@@ -65,15 +65,19 @@
     }
     .post-content {
         position: relative;
-        top: -30px;
         width: 93%;
         margin: 0 0 0 auto;
         padding: 20px;
         background-color: @color-swatch7;
         border: 1px solid darken(@color__body--background, 10%);
         @media @tablet {
-            top: 0;
             width: 100%;
+        }
+    }
+    .post-image + .post-content {
+        top: -30px;
+        @media @tablet {
+            top: 0;
         }
     }
     .title-link,
