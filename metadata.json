@@ -1,5 +1,5 @@
 {
-    "name": "Broad",
+    "name": "Architect",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
     "screenshot": "screenshot.jpg",
@@ -23,7 +23,7 @@
             "color2":"#2b60b6",
             "color3":"#2b60b6",
             "color4":"#141426",
-            "color5":"#4f4f54",
+            "color5":"#75757b",
             "color6":"#878a8d",
             "color7":"#ffffff"
         }
@@ -56,10 +56,10 @@
         },
         "font4": {
             "font-family": "\"Vollkorn\", Georgia, serif",
-            "font-size": "18px",
+            "font-size": "20px",
             "font-weight": "400",
-            "line-height": "28px",
-            "color": "@color-swatch5",
+            "line-height": "30px",
+            "color": "@color-swatch4",
             "letter-spacing": "0px"
         },
         "font5": {
@@ -72,9 +72,9 @@
         },
         "font6": {
             "font-family": "'Istok Web', sans-serif",
-            "font-size": "18px",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "26px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch4",
             "letter-spacing": "0px",
@@ -83,20 +83,20 @@
          },
         "font7": {
             "font-family": "'Istok Web', sans-serif",
-            "font-size": "18px",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "26px",
             "color": "@color-swatch1",
             "letter-spacing": "0px",
             "background-color": "@color-swatch3",
-            "background-color-hover": "@color-swatch2"
+            "background-color-hover": "lighten(@color-swatch3,5%)"
         },
         "font8": {
             "font-family": "'Istok Web', sans-serif",
             "font-size": "36px",
             "font-weight": "400",
             "line-height": "46px",
-            "color": "@color-swatch6",
+            "color": "@color-swatch1",
             "letter-spacing": "0px"
         },
         "font9": {
@@ -104,15 +104,15 @@
             "font-size": "20px",
             "font-weight": "400",
             "line-height": "30px",
-            "color": "@color-swatch6",
+            "color": "@color-swatch1",
             "letter-spacing": "0px"
         },
         "font10": {
             "font-family": "'Istok Web', sans-serif",
-            "font-size": "30px",
+            "font-size": "26px",
             "font-weight": "400",
-            "line-height": "40px",
-            "color": "@color-swatch3",
+            "line-height": "36px",
+            "color": "@color-swatch4",
             "letter-spacing": "0px"
         }
     },
@@ -169,8 +169,8 @@
             "font__p--letter-spacing" : "@font-swatch5-letter-spacing"
         },
         "button": {
-            "color__button--background": "@color__primary",
-            "color__button--background--hover": "@color__secondary",
+            "color__button--background": "@font-swatch7-background-color",
+            "color__button--background--hover": "@font-swatch7-background-color-hover",
             "color__button--text": "@font-swatch7-color",
 
             "font__button--font-family" : "@font-swatch7-font-family",
@@ -210,7 +210,7 @@
         },
         "forms": {
             "color__form-legend--text": "@color__h2--text",
-            "color__form-label--text": "@color__p--text"
+            "color__form-label--text": "darken(@color__body--background, 30%)"
         },
         "image": {
             "color__image-title--text": "@color__h2--text",
@@ -227,7 +227,8 @@
         },
         "blog": {
             "color__blogpostlist-title--text": "@color__h2--text",
-            "color__blogpost-title--text": "@color__h1--text"
+            "color__blogpost-title--text": "@color__h1--text",
+            "color__blogpost-article--background": "@color-swatch7"
         },
         "ecommerce": {
             "color__ecomproductslist-label--text": "@color__form-label--text",

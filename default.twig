@@ -4,15 +4,18 @@
 
     <!-- Header -->
     <div class="template-header">
-        <div class="brand">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {
-                "business": "profile",
-                "showTplWidget":"0"
-            })|raw}}
-        </div>
+        <div class="template-header-container">
+            <div class="brand">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {
+                    "business": "profile",
+                    "showTplWidget":"0"
+                })|raw}}
+            </div>
 
-        {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+            {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+
+        </div>
     </div>
 
     <!-- Main Widet Zone -->

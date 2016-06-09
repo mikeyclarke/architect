@@ -4,12 +4,14 @@
 
     <div class="homepage-container">
         <!-- Header -->
-        <div class="brand">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {
-                "business": "profile",
-                "showTplWidget":"0"
-            })|raw}}
+        <div class="template-header-container">
+            <div class="brand">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {
+                    "business": "profile",
+                    "showTplWidget":"0"
+                })|raw}}
+            </div>
         </div>
 
         <!-- Responsive Slideshow Widget -->

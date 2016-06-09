@@ -1,25 +1,19 @@
-// -------------------------------------
-// BaseKit Standard Template: Stylesheet
-// -------------------------------------
-
-// body.min-tdk #tdk-toolbar,
-// #tdk-toolbar {
-//     display: none !important;
-// }
+// -----------------------------
+// Stylesheet
+// -----------------------------
 
 // -----------------------------
 // #Table of Contents
 // -----------------------------
 
-// 1. #LESS INCLUDES
+// 1. #LESS Includes
+// 2. #Global Styles
 // 2. #PAGE SETTINGS
 // 3. #Mixins
 
 
-
-
 // -----------------------------
-// 1. #LESS Includes
+// #LESS Includes
 // -----------------------------
 
 
@@ -27,38 +21,22 @@
 
 @import "@{templateLocal}/bk-v8-test.less";
 
-// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
-//    your template to guarentee widgets come to life. Proivides default styles for all widgets.
-
 // Template Includes
-@import "@{templateLocal}/less/forms.less"; // Global styles
+@import "@{templateLocal}/less/forms.less"; // Forms global styles
 @import "@{templateLocal}/less/widgets.less"; // Widgets
-@import "@{templateLocal}/less/mixins.less";
-@import "@{templateLocal}/less/header.less";
+@import "@{templateLocal}/less/mixins.less"; // Mixins
+@import "@{templateLocal}/less/header.less"; // Header Style
 
 // Plugin Includes
 @import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
 @import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
 @import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
 
-@import "@{templateLocal}/less/fork-variables.less"; // Forked Templates
-
-
-
-
-// -----------------------------
-// Anchor links
-// -----------------------------
-
-a {
-    color: @color__link--text;
-}
-
 
 
 
 // -----------------------------
-// Global Styles
+// #Global Styles
 // -----------------------------
 
 
@@ -77,7 +55,16 @@ body {
         font-size: bkscale(@font__companyname--font-size,0.8);
         line-height: bkscale(@font__companyname--line-height,0.8);
     }
+    &:hover {
+        color: @color-swatch6;
+        text-decoration: none;
+    }
 }
+
+a {
+    color: @color__link--text;
+}
+
 
 h1 {
     color: @color__h1--text;
@@ -131,13 +118,41 @@ p {
 // Page Container
 // -----------------------------
 
+.container {
+    .widget {
+        width: 90%;
+        margin: 50px 5% 0;
+        @media only screen and (min-width: 1300px) {
+            width: 1200px;
+            margin: 50px auto 0;
+        }
+    }
+    [data-name="image"] {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .responsivecolumns {
+        .widget {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
 
-.container,
+.template-header-container {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1300px) {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
 .template-footer {
     width: 90%;
     margin: 50px 5% 0;
-    @media only screen and (min-width: 1140px) {
-        width: @value__container--width;
+    @media only screen and (min-width: 1300px) {
+        width: 1200px;
         margin: 50px auto 0;
     }
     @media @tablet {
@@ -151,18 +166,21 @@ p {
     }
 }
 
+.template-blogpost .container {
+    @media only screen and (min-width: 1024px) {
+        margin: 76px auto 0;
+    }
+    [data-name="blogpost"] {
+        margin: 0 auto;
+    }
+}
+
 .homepage-container {
     position: relative;
 }
 
-.template-blogpost .container {
-    width: 100%;
-    margin: 0 auto;
-    @media only screen and (min-width: 1140px) {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
+
+
 
 // Footer
 // -----------------------------
@@ -177,11 +195,9 @@ p {
         @media only screen and (max-width : 1024px) {
             min-height: 51px;
         }
-        padding: 30px auto 20px;
         margin-top: 50px;
         margin-bottom: 0;
         @media only screen and (max-width: 1024px) {
-            padding: 30px 5%;
             margin-bottom: 0;
         }
         // flex box classes are the same as in header - header-style.less
@@ -204,6 +220,12 @@ p {
             -ms-flex: 1 1 100%;
             flex: 1 1 100%;
             text-align: center;
+        }
+    }
+    .company-link {
+        color: @color-swatch3;
+        &:hover {
+            color: lighten(@color-swatch3, 10%);
         }
     }
 }

@@ -1,14 +1,25 @@
 {% extends "layout.twig" %}
-{% block class %}template-blogpost{% endblock %}
+{% block class %}template-default template-blogpost{% endblock %}
 {% block content %}
 
-                <!-- Header Include -->
-                {% include "includes/header.twig" %}
+    <!-- Header -->
+    <div class="template-header">
+        <div class="template-header-container">
+            <div class="brand">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {
+                    "business": "profile",
+                    "showTplWidget":"0"
+                })|raw}}
+            </div>
 
-                <section class="container">
+            {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
 
-        <!-- Main Widet Zone -->
+        </div>
+    </div>
 
+    <!-- Main Widet Zone -->
+    <section class="container">
         {{zone('main')|raw}}
     </section>
 
