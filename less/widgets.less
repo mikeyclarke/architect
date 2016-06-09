@@ -111,7 +111,7 @@
         vertical-align: middle;
         display: table-cell;
         text-align: center;
-        background-color: rgba(0,0,0,0.1);
+        background-color: transparent;
         .image-title {
             font-family: @font__feature-headline--font-family;
             color: @color__feature-headline--text;
@@ -737,6 +737,10 @@
     .tweet-item {
         width: 100%;
         display: inline-block;
+        margin: 0 0 10px;
+    }
+    .tweet-item:first-child {
+        margin: 0 0 10px;
     }
 }
 
@@ -754,7 +758,7 @@
     }
     .caption {
         position: relative;
-        width: 80%;
+        width: 65%;
         top: -30px;
         padding: 10px 20px;
         margin: 0 0 0 auto;
@@ -905,3 +909,22 @@
 .gallery__figure:hover .gallery__caption {
     margin-right: 0;
 }
+
+// Gallery in Responsive Columns
+// -----------------------------
+
+.responsivecolumns {
+    .gallery .image-link {
+        height: 250px;
+        @media @mobile {
+            height: 200px;
+        }
+    }
+}
+
+
+// -----------------------------
+// Blockquote
+// -----------------------------
+
+
