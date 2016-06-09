@@ -512,17 +512,18 @@
 // -----------------------------
 
 .social-item {
-    background-color: @color__socialicons--icon--background;
     width: 28px;
     height: 28px;
     margin-right: 3px;
     text-align: center;
+    background-color: @color__socialicons--icon--background;
+    border: 1px solid darken(@color__body--background, 15%);
     &:hover {
-        background-color: darken(@color__socialicons--icon--background, 10%);
+        border: 1px solid @color-swatch3;
     }
     .social-link {
         display: inline-block;
-        padding: 5px 8px 6px;
+        padding: 2px 8px 6px;
         color: @color__socialicons--icon;
         &:before {
             margin-right: 0;
@@ -563,6 +564,7 @@
 }
 
 .profile {
+    margin: 0 0 20px;
     h1, h2, h3, h4, p, a, .social-link:before {
         font-size: bkscale(@font__p--font-size,0.9);
         line-height: bkscale(@font__p--line-height,0.9);
@@ -923,8 +925,14 @@
 }
 
 
+
 // -----------------------------
-// Blockquote
+// #Yelp
 // -----------------------------
 
+
+.yelpreview ul {
+    list-style: none;
+    margin: 16px 0;
+}
 
