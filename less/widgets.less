@@ -764,7 +764,7 @@
         position: relative;
         width: 65%;
         top: -30px;
-        padding: 10px 20px;
+        padding: 20px 30px;
         margin: 0 0 0 auto;
         background-color: @color-swatch7;
         @media @tablet {
@@ -774,9 +774,10 @@
     }
     .image-title {
         font-family: @font__h3--font-family;
-        font-size: @font__h3--font-size;
-        line-height: @font__h3--line-height;
+        font-size: bkscale(@font__h3--font-size,0.9);
+        line-height: bkscale(@font__h3--line-height,0.9);
         color: @color__h3--text;
+        padding-bottom: 10px;
     }
     .image-description {
         font-size: @font__p--font-size;
@@ -788,7 +789,7 @@
 .responsivecolumns .imagewidget {
     .caption {
         position: relative;
-        width: 85%;
+        width: 90%;
         @media @tablet {
             width: 100%;
         }
