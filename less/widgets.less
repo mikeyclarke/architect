@@ -968,30 +968,36 @@ blockquote {
     position: relative;
     min-height: 80px;
     margin-top: 40px;
-    h1, h2, h3, h4, p, a {
-        display: inline-block;
-        padding: 0 0 0 130px;
-    }
+    padding-left: 130px;
 }
 
 blockquote:before {
     content: open-quote;
-    font-family: garamond, serif;
-    line-height: 0;
-    font-size: 250px;
     position: absolute;
     top: 49px;
-    color:darken(@color__body--background, 10%);
+    left: 0;
     z-index: -1;
+    line-height: 0;
+    font-size: 250px;
+    font-family: garamond, serif;
+    color:darken(@color__body--background, 10%);
 }
 
-.responsivecolumns blockquote {
-    h1, h2, h3, h4, p, a {
-        display: inline-block;
-        padding: 0 0 0 45px;
-    }
-    &:before {
-        font-size: 80px;
-        top: 22px;
+.responsivecolumns {
+    .columns-three-left,
+    .columns-three-middle,
+    .columns-three-right,
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        blockquote {
+            margin-top: 20px;
+            padding-left: 40px
+            &:before {
+                font-size: 80px;
+                top: 22px;
+            }
+        }
     }
 }
