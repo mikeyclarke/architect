@@ -1,4 +1,6 @@
-
+// -----------------------------
+// Header
+// -----------------------------
 
 .brand {
     min-height: 45px;
@@ -6,13 +8,13 @@
 
 
 // -----------------------------
-// Homepage
+// Homepage Flexbox
 // -----------------------------
 
 .homepage-container {
     .flexbox(flex);
     .flex-direction(column);
-    .flex-wrap(wrap);
+    .flex-wrap(nowrap);
     .justify-content(space-between);
     .align-items(center);
     .align-content(space-between);
@@ -24,6 +26,26 @@
     }
 }
 
+// Flex-items in homepage-container
+.template-header-container,
+.widget[data-widget-type="responsiveslideshow"],
+.widget[data-widget-type="extendednavigation"] {
+
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+
+    // Nested Flexbox to center content in each flex-item on Desktop
+    @media only screen and (min-width: 768px) {
+        .flexbox(flex);
+        .flex-direction(column);
+        .flex-wrap(nowrap);
+        .justify-content(space-around);
+        .align-items(center);
+        .align-content(center);
+    }
+}
+
 .template-homepage {
     .brand,
     .widget[data-widget-type="responsiveslideshow"],
@@ -32,13 +54,13 @@
     }
 }
 
-.brand,
-.widget[data-widget-type="responsiveslideshow"],
-.widget[data-widget-type="extendednavigation"] {
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-}
+// .brand,
+// .widget[data-widget-type="responsiveslideshow"],
+// .widget[data-widget-type="extendednavigation"] {
+//     -webkit-flex: 0 1 auto;
+//     -ms-flex: 0 1 auto;
+//     flex: 0 1 auto;
+// }
 
 @media @tablet {
     .brand {
@@ -54,7 +76,7 @@
 
 .template-homepage {
     .brand {
-        margin: 20px auto 10px;
+        margin: 10px auto 10px;
         max-width: 1200px;
         text-align: center;
         @media @tablet {
@@ -62,7 +84,8 @@
             .flex-wrap(wrap);
             .align-items(center);
             .align-content(stretch);
-            // padding-left: 5%;
+
+            text-align: left;
 
             .logo {
                 margin: 10px 5px 10px 0;
