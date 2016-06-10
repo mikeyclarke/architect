@@ -773,10 +773,10 @@
         }
     }
     .image-title {
-        font-family: @font__h4--font-family;
-        font-size: @font__h4--font-size;
-        line-height: @font__h4--line-height;
-        color: @color__h4--text;
+        font-family: @font__h3--font-family;
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
+        color: @color__h3--text;
     }
     .image-description {
         font-size: @font__p--font-size;
@@ -789,6 +789,9 @@
     .caption {
         position: relative;
         width: 85%;
+        @media @tablet {
+            width: 100%;
+        }
     }
 }
 
@@ -967,8 +970,12 @@ hr.rule {
 blockquote {
     position: relative;
     min-height: 80px;
-    margin-top: 40px;
+    margin-top: 45px;
     padding-left: 130px;
+    @media @tablet {
+        margin-top: 20px;
+        padding-left: 40px;
+    }
 }
 
 blockquote:before {
@@ -981,6 +988,10 @@ blockquote:before {
     font-size: 250px;
     font-family: garamond, serif;
     color:darken(@color__body--background, 10%);
+    @media @tablet {
+        font-size: 80px;
+        top: 22px;
+    }
 }
 
 .responsivecolumns {
