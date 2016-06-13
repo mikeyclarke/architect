@@ -32,17 +32,11 @@
 
         {% include basekit.bodyScript %}
 
-        <!-- Istok Web Font from Google Fonts -->
-
-        <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
 
             <!-- Sticky Header -->
 
         <script src="{{asset('js/position-sticky.js')}}"></script>
         <script>
-        PositionSticky([document.getElementById('nav-bar')]);
-
         $(".homepage-container").css("height", $(window).height());
         $(window).bind("resize",function() {
             $(".homepage-container").css("height", $(window).height());
