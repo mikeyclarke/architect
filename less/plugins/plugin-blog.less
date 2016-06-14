@@ -102,6 +102,23 @@
     }
 }
 
+// Pagination List
+.pagination-list {
+    .flex-display;
+    .justify-content(space-between);
+
+    padding-bottom: 30px;
+    border-bottom: 1px solid darken(@color__body--background, 10%);
+
+    .button {
+        &:before,
+        &:after {
+            font-size: 10px;
+        }
+    }
+}
+
+// Responsive Columns
 .responsivecolumns {
     .blogpostlist {
         margin: 0;
@@ -236,15 +253,21 @@
             background-color: transparent;
         }
     }
+    .timestamp,
+    .category-title,
+    .tags-title,
+    .network-item .button {
+        color: lighten(@color__p--text, 20%);
+    }
     .button {
         padding: 0;
-        color: @color__p--text;
         background-color: transparent;
         &.icon:before {
             display: none;
         }
         &:hover {
             color: @color-swatch3;
+            background-color: transparent;
         }
     }
     .network-item {
