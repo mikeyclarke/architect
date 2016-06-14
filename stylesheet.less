@@ -136,11 +136,15 @@ button,
 
 .container {
     .widget {
+        display: inline-block;
         width: 90%;
         margin: 50px 5% 0;
         @media only screen and (min-width: 1300px) {
             width: 1200px;
             margin: 50px auto 0;
+        }
+        @media @tablet {
+            margin: 20px 5% 0;
         }
     }
     [data-name="image"] {
@@ -149,6 +153,7 @@ button,
     }
     .responsivecolumns {
         .widget {
+            display: inline-block;
             width: 100%;
             margin: 15px auto;
         }
