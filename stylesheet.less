@@ -221,6 +221,9 @@ button,
         @media only screen and (max-width: 1024px) {
             margin-bottom: 0;
         }
+        @media @mobile {
+            margin-top: 0;
+        }
         // flex box classes are the same as in header - header-style.less
         .justify-content(space-between);
         @media @tablet {
@@ -229,6 +232,9 @@ button,
         .flex-profile1,
         .flex-profile2 {
             margin: 10px 0;
+            @media @mobile {
+                margin: 0 auto;
+            }
         }
     }
     .flex-profile1,
