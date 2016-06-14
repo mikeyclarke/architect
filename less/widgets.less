@@ -296,7 +296,7 @@
         @media @tablet {
             z-index: 10400!important;
             display: block;
-            margin: 44px auto 0;
+            margin: 0 auto;
 
             &:hover {
                 background: rgba(0, 147, 135, 0.2);
@@ -373,7 +373,13 @@
 // Nav item
 .navigation-item:first-child {
     @media @tablet {
-        border-top: 1px solid darken(@color__body--background, 5%);
+        border-top: none;
+    }
+}
+
+.navigation-item:last-child {
+    @media @tablet {
+        border-bottom: none;
     }
 }
 
@@ -418,11 +424,11 @@
 
 @media @tablet {
     .navigation-toggle {
-        position: fixed;
-        top: 12px;
-        right: 5%;
+        position: absolute;
+        top: -54px;
+        right: 0;
         width: 26px;
-        height: 45px;
+        height: 54px;
         display: block;
         overflow: hidden;
         text-indent: -9999px;
@@ -440,7 +446,7 @@
             top: 0;
             left: 50%;
             right: 0;
-            margin-top: 15px;
+            margin-top: 21px;
             margin-left: -13px;
             background: darken(@color__navigation--background, 50%);
             box-shadow: 0 6px 0 darken(@color__navigation--background, 50%);
@@ -454,7 +460,7 @@
             top: 12px;
             left: 50%;
             right: 0;
-            margin-top: 15px;
+            margin-top: 21px;
             margin-left: -13px;
             background: darken(@color__navigation--background, 50%);
             .transition( all, 0.5s, ease );
@@ -514,7 +520,7 @@
     }
     .navigation-item {
         width: 100%;
-        border-bottom: 1px solid darken(@color__body--background, 5%);
+        border-bottom: 1px solid darken(@color__body--background, 3%);
     }
 }
 
