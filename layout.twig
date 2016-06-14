@@ -37,6 +37,9 @@
 
         <script src="{{asset('js/position-sticky.js')}}"></script>
         <script>
+
+        PositionSticky([document.getElementById('nav-bar')]);
+
         $(".homepage-container").css("height", $(window).height());
         $(window).bind("resize",function() {
             $(".homepage-container").css("height", $(window).height());
