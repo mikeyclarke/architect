@@ -589,6 +589,9 @@
 
 .profile {
     margin: 0 0 20px;
+    @media @mobile {
+        margin: 0 0 10px;
+    }
     h1, h2, h3, h4, p, a, .social-link:before {
         font-size: bkscale(@font__p--font-size,0.9);
         line-height: bkscale(@font__p--line-height,0.9);
@@ -604,6 +607,9 @@
     }
     .address p {
         padding-bottom: 0;
+    }
+    .socialicons {
+        padding-top: 5px;
     }
 }
 
