@@ -148,17 +148,17 @@
     background-color: @color__navigation--background;
 }
 
-.template-homepage .sticky .extendednavigation {
-    .navigation-body {
+.template-homepage .extendednavigation {
+    .navigation-body.sticky {
         width: 100%;
         background-color: @color__navigation--background;
-    }
-    .navigation-list {
-        width: 90%;
-        margin: 0 5%;
-        @media only screen and (min-width: 1300px) {
-            width: 1200px;
-            margin: 0 auto;
+        .navigation-list {
+            width: 90%;
+            margin: 0 5%;
+            @media only screen and (min-width: 1300px) {
+                width: 1200px;
+                margin: 0 auto;
+            }
         }
     }
 }
