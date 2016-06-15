@@ -628,11 +628,14 @@
 
 .profile {
     margin: 0 0 10px;
-    h1, h2, h3, h4, p, a, .social-link:before {
+    h1, h2, h3, h4, p, a {
         font-family: @font__p--font-family;
         font-size: bkscale(@font__p--font-size,0.9);
         line-height: bkscale(@font__p--line-height,0.9);
         padding-bottom: 0;
+    }
+    h1, h2, h3, h4, p {
+        color: @color__p--text;
     }
     .legend {
         font-size: bkscale(@font__p--font-size,0.9);
