@@ -334,7 +334,7 @@
 .template-homepage .extendednavigation {
     width: 90%;
     margin: 0 5%;
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1300px) {
         width: 1200px;
         margin: 0 auto;
     }
@@ -627,11 +627,9 @@
 }
 
 .profile {
-    margin: 0 0 20px;
-    @media @tablet {
-        margin: 0 0 10px;
-    }
+    margin: 0 0 10px;
     h1, h2, h3, h4, p, a, .social-link:before {
+        font-family: @font__p--font-family;
         font-size: bkscale(@font__p--font-size,0.9);
         line-height: bkscale(@font__p--line-height,0.9);
         padding-bottom: 0;
@@ -835,6 +833,7 @@
         padding: 20px 5%;
         margin: 0 0 0 auto;
         background-color: @color-swatch7;
+        border: 1px solid darken(@color-swatch7, 7%);
         @media @tablet {
             width: 100%;
             top: 0;
