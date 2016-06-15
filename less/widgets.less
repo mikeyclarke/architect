@@ -331,6 +331,19 @@
     &.align-center { text-align: center; }
 }
 
+.template-homepage .extendednavigation {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1024px) {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    @media @tablet {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 // Nav font
 .extendednavigation {
     .item-name {
@@ -342,6 +355,7 @@
         letter-spacing: @font__navigation--letter-spacing;
         &:hover {
             color: @color__navigation--text--hover;
+            .transition( all, 0.5s, ease );
         }
     }
     @media only screen and (min-width: 769px) {
@@ -419,6 +433,22 @@
     }
 }
 
+// Folder in homepage
+.template-homepage {
+    @media only screen and (min-width: 1024px) {
+        .navigation-list--children {
+            top: inherit;
+            bottom: 100%;
+        }
+        .item-name:hover:after {
+            margin-bottom: 10px;
+            -ms-transform: rotate(180deg); /* IE 9 */
+            -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+            transform: rotate(180deg);
+            .transition( all, 0.5s, ease );
+        }
+    }
+}
 
 // Collapsible navigation
 // ----------------------

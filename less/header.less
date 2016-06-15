@@ -5,6 +5,9 @@
 .brand {
     min-height: 45px;
     margin: 0 auto;
+    @media @tablet {
+        padding-right: 50px;
+    }
 }
 
 
@@ -174,13 +177,6 @@
         .flex-wrap(wrap);
         .align-items(center);
         .align-content(stretch);
-        // padding-left: 5%;
-        @media only screen and (min-width: 1140px) {
-            // padding-left: 50px;
-        }
-        @media @tablet {
-            padding-right: 50px;
-        }
     }
     .logo {
         margin: 10px 5px 10px 0;
@@ -190,8 +186,3 @@
         }
     }
 }
-
-
-
-
-
