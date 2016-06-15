@@ -700,9 +700,9 @@
         background-color: @color__twitter-item--background;
         border: 1px solid darken(@color__twitter-item--background, 7%);
 
-        -webkit-flex: 1 0 20%;
-        -ms-flex: 1 0 20%;
-        flex: 1 0 20%;
+        -webkit-flex: 1 0 17%;
+        -ms-flex: 1 0 17%;
+        flex: 1 0 17%;
 
         &:first-child {
             margin: 0 0 20px 24px;
@@ -721,7 +721,7 @@
         }
         .tweet-wrap {
             width: 100%;
-            padding: 0 0 0 50px;
+            padding: 0 0 0 40px;
             text-align: left;
 
             .flex-display;
@@ -800,12 +800,12 @@
             a,
             span {
                 font-size: bkscale(@font__p--font-size,0.75);
-                line-height: bkscale(@font__p--line-height,0.75);
+                line-height: bkscale(@font__p--line-height,0.7);
             }
             .retweeted-by {
                 display: inline-block;
                 width: 100%;
-                color: @color__twitter-tweet--text;
+                color: darken(@color__body--background, 30%);
             }
         }
     }
