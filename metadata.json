@@ -196,7 +196,7 @@
             "color__form-label--text": "darken(@color__body--background, 30%)"
         },
         "slideshow": {
-            "color__slideshow-caption--background": "rgba(0,0,0,0.2)",
+            "color__slideshow-caption--background": "#000000",
             "color__slideshow-title--text": "@font-swatch8-color",
             "color__slideshow-description--text": "@font-swatch9-color",
             "color__slideshow-pagination-item--background": "@color-swatch6",
