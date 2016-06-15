@@ -145,6 +145,22 @@
 
 .sticky .navigation-list {
     border-bottom: 1px solid darken(@color__navigation--background, 7%);
+    background-color: @color__navigation--background;
+}
+
+.template-homepage .sticky .extendednavigation {
+    .navigation-body {
+        width: 100%;
+        background-color: @color__navigation--background;
+    }
+    .navigation-list {
+        width: 90%;
+        margin: 0 5%;
+        @media only screen and (min-width: 1300px) {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    }
 }
 
 
