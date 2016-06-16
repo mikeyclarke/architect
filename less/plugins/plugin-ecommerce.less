@@ -64,7 +64,7 @@
     }
 }
 
-.product-gallery {
+.ecomproduct .product-images {
     text-align: center;
     .image--thumb {
         max-height: 80px;
@@ -142,15 +142,6 @@
     }
 }
 
-// Categories and Tags
-
-.product-attributes {
-    display: inline-block;
-    width: 100%;
-    margin: 0 0 40px;
-    background-color: transparent;
-}
-
 // View Basquet Button
 
 .view-basket-wrap .button {
@@ -215,6 +206,13 @@
     width: 100%;
     margin: 0 0 40px;
     background-color: transparent;
+    p, a {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+    p {
+        color: @color__form-label--text;
+    }
 }
 
 // View Basquet Button
