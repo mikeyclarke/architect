@@ -118,6 +118,15 @@
     }
 }
 
+// Return to Blog Link
+
+.blog-home-link {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
 // Responsive Columns
 .responsivecolumns {
     .blogpostlist {
@@ -194,9 +203,9 @@
     }
 
     .post-content {
-        -webkit-flex: 0 1 67%;
-        -ms-flex: 0 1 67%;
-        flex: 0 1 67%;
+        -webkit-flex: 0 1 76%;
+        -ms-flex: 0 1 76%;
+        flex: 0 1 76%;
 
         .flex-order(2);
 
@@ -212,6 +221,20 @@
             padding-bottom: 0;
         }
     }
+
+    .post-article--has-image {
+        .post-content,
+        .post-footer {
+            position: relative;
+            top: -40px;
+        }
+        .post-content {
+            -webkit-flex: 0 1 67%;
+            -ms-flex: 0 1 67%;
+            flex: 0 1 67%;
+        }
+    }
+
     .post-footer {
         -webkit-flex: 0 1 24%;
         -ms-flex: 0 1 24%;
@@ -237,8 +260,6 @@
     }
     .post-content,
     .post-footer {
-        position: relative;
-        top: -40px;
         background-color: @color__blogpost-article--background;
 
         @media @tablet {
