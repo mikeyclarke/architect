@@ -103,6 +103,10 @@ select {
     font-weight: @font__p--font-weight;
     line-height: @font__p--line-height;
     letter-spacing: @font__p--letter-spacing;
+    // Removes default arrow in Firefox
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
 }
 
 code,
