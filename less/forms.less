@@ -110,6 +110,11 @@ select {
         text-overflow: '';
 }
 
+// Hides arrow in IE
+select::-ms-expand {
+    opacity: 0;
+}
+
 code,
 pre,
 th {
